@@ -4,10 +4,21 @@ public class Main {
     public static void main(String[] args) {
         // read input from command line
         Scanner scanner = new Scanner(System.in);
+        long userInput;
         // store the input in a variable and declare data type
-        long userInput = scanner.nextLong();
+        try {
+            userInput = scanner.nextLong();
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+            return;
+        }
+
+        if (userInput <= 0) {
+            System.out.println("number must be greater than 0");
+            return;
+        }
         // close to save resources
-        scanner.close();
+        // scanner.close();
 
         // print initial number
         System.out.print(userInput + " ");
