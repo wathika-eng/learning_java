@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// check if user is 100 years
 public class exercise_01 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
