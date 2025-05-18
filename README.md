@@ -3,14 +3,15 @@
 - Oracle university - <https://academy.oracle.com/en/solutions-curriculum-java.html#java1-tab>
 - Moocfi - <https://java-programming.mooc.fi/>
 
+Install Java: <https://sdkman.io/>
 
-packages - more classes -  small letters - reverse domain - com.me
+<!-- packages - more classes -  small letters - reverse domain - com.me
 classes - PascalCase - container for methods
 methods - camelCase
 
 intellj idea- new project - Java - project sdk
 
-folder -> .idea and src -> packageName ->
+folder -> .idea and src -> packageName -> -->
 
 ```java
 //  one public class per file
@@ -21,6 +22,11 @@ public class Hello
   public static void main(String[] args){
     System.out.println("Hey");
     }
+  
+  // getter
+  public static int getAge() {
+    return age;
+  }
    new Customer // a pointer/reference, allocate mem
    int price2 = 10, price3 = 11, price4 = 40;
    // each var must be declared separate or in one liner but not together with another
