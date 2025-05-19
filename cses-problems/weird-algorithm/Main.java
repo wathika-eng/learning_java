@@ -17,24 +17,20 @@ public class Main {
             System.out.println("number must be greater than 0");
             return;
         }
-        // close to save resources
-        // scanner.close();
+
+        StringBuilder sb = new StringBuilder();
 
         // print initial number
-        System.out.print(userInput + " ");
+        sb.append(userInput).append(" ");
         // print until number is 1
         while (userInput != 1) {
             userInput = checker(userInput);
-            System.out.print(userInput + " ");
+            sb.append(userInput).append(" ");
         }
+        System.out.print(sb);
     }
 
     public static long checker(long userInput) {
-        if (userInput % 2 != 0) {
-            userInput = (userInput * 3) + 1;
-        } else if (userInput % 2 == 0) {
-            userInput = userInput / 2;
-        }
-        return userInput;
+        return userInput = (userInput % 2 == 0) ? (userInput / 2) : (userInput * 3) + 1;
     }
 }
