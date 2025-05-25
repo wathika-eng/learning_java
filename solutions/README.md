@@ -16,9 +16,11 @@ The [Java Tutorial by Oracle University](https://mylearn.oracle.com/ou/story/408
 - [sdkman](https://sdkman.io/)
 
 ## Running the Code
+
 1. Download and install the [Java Development Kit (JDK)](https://sdkman.io/) on your machine. `sdk install java 17.0.15-tem`
 2. Write your code in `.java` files or clone the Git repository.
 3. Compile and run your code from the terminal:
+
    ```bash
    javac CodeFile.java
    java CodeFile
@@ -37,25 +39,71 @@ Create a program that asks the user to enter their name and age. Print a message
 <details>
   <summary>solution</summary>
 
-  This is the hidden solution content.  
-  You can write code, explanations, or anything else here.
-
   ```java
-  public class Main {
-      public static void main(String[] args) {
-          System.out.println("Hello, World!");
-      }
-  }
+  import java.util.Scanner;
+
+// check if user is 100 years
+    public class exercise_01 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            String name = "";
+            int age = 0;
+
+            try {
+                System.out.printf("What is your name?: ");
+                name = scanner.nextLine().trim();
+
+                System.out.printf("What is your age?: ");
+                String ageInput = scanner.nextLine().trim();
+                age = Integer.parseInt(ageInput);
+            } catch (Exception e) {
+                System.out.println("Error occured: " + e);
+                return;
+            }
+
+            if (age <= 0 || name.trim().isBlank()) {
+                System.out.println("Input correct details, age must be greater than 0");
+                return;
+            }
+
+            if (age > 100) {
+                System.out.println("You are " + name + ", you are " + age + " years");
+                return;
+            }
+
+            System.out.println("You are " + name + ", you have " + (100 - age) + " years to be 100");
+        }
+    }
+  ```
+
 </details>
----
 
 ## Exercise 2
 
 Ask the user for a number. Print whether the number is even or odd.
 
-**Solution**
+<details>
+  <summary>solution</summary>
 
----
+```java
+    import java.util.Scanner;
+
+    public class exercise_02 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.printf("Enter a number: ");
+            int number = scanner.nextInt();
+
+            if (number % 2 == 0) {
+                System.out.println("The number " + number + " is even.");
+            } else {
+                System.out.println("The number " + number + " is odd.");
+            }
+        }
+    }
+```
+
+</details>
 
 ## Exercise 3
 
@@ -67,7 +115,25 @@ int[] a = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89};
 
 Write a program that prints all elements of the list that are less than 5.
 
-**Solution**
+<details>
+  <summary>solution</summary>
+
+```java
+    public class exercise_03 {
+        public static void main(String[] args) {
+            int[] a = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89};
+
+            System.out.println("Elements less than 5:");
+            for (int number : a) {
+                if (number < 5) {
+                    System.out.print(number + " ");
+                }
+            }
+        }
+    }
+```
+
+</details>
 
 ---
 
@@ -77,7 +143,29 @@ Create a program that asks the user for a number and prints a list of all its di
 
 *Note*: A divisor is a number that divides evenly into another number (e.g., 13 is a divisor of 26 because 26 / 13 has no remainder).
 
-**Solution**
+<details>
+  <summary>solution</summary>
+
+```java
+    import java.util.Scanner;
+
+    public class exercise_04 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.printf("Enter a number: ");
+            int number = scanner.nextInt();
+
+            System.out.println("Divisors of " + number + ":");
+            for (int i = 1; i <= number; i++) {
+                if (number % i == 0) {
+                    System.out.print(i + " ");
+                }
+            }
+        }
+    }
+```
+
+</details>
 
 ---
 
