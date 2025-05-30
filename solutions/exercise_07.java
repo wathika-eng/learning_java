@@ -10,6 +10,7 @@ public class exercise_07 {
         for (int i : a) {
             if (i % 2 == 0) {
                 even.add(i);
+                return;
             }
         }
         System.out.println("even numbers: " + even);

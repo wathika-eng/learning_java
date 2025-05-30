@@ -1,0 +1,65 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "solutions_147a22de"
+        },
+        {
+            "type": "java",
+            "name": "exercise_01",
+            "request": "launch",
+            "mainClass": "exercise_01",
+            "projectName": "solutions_147a22de"
+        },
+        {
+            "type": "java",
+            "name": "exercise_02",
+            "request": "launch",
+            "mainClass": "exercise_02",
+            "projectName": "solutions_147a22de"
+        },
+        {
+            "type": "java",
+            "name": "exercise_03",
+            "request": "launch",
+            "mainClass": "exercise_03",
+            "projectName": "solutions_147a22de"
+        },
+        {
+            "type": "java",
+            "name": "exercise_04",
+            "request": "launch",
+            "mainClass": "exercise_04",
+            "projectName": "solutions_147a22de"
+        },
+        {
+            "type": "java",
+            "name": "exercise_06",
+            "request": "launch",
+            "mainClass": "exercise_06",
+            "projectName": "solutions_147a22de"
+        },
+        {
+            "type": "java",
+            "name": "exercise_07",
+            "request": "launch",
+            "mainClass": "exercise_07",
+            "projectName": "solutions_147a22de"
+        }
+    ]
+}
