@@ -1,8 +1,11 @@
+import java.util.Scanner;
+
 import department.Department;
 import employee.Employee;
 
 public class HRApp {
     public static void main(String[] args) {
+        int id = 0;
         System.out.println("Starting HR App...");
 
         Department ICT = new Department("ICT");
@@ -18,7 +21,12 @@ public class HRApp {
         Employee emp8 = new Employee(8, "Grace", 295040.00);
         Employee emp9 = new Employee(9, "Hank", 330020.00);
         Employee emp10 = new Employee(10, "Ivy", 26000.00);
+
+        // limit reached
         Employee emp11 = new Employee(11, "Ivy2", 26000.00);
+
+        emp1.setid(40);
+        emp1.getid();
 
         ICT.addEmployees(emp1);
         ICT.addEmployees(emp2);
@@ -34,8 +42,26 @@ public class HRApp {
 
         // System.out.println("Department details: " + ICT.toString());
         System.out.println("Employee: " + ICT.getEmployees());
-        // System.out.println(ICT.checkEmp(001));
+
+        System.out.println("Total emps: " + ICT.numOfEmployees());
+        // System.out.println(IC T.checkEmp(001));
         System.out.println("Total Salary: " + ICT.totalSalary());
-        System.out.println("Average Salary: " + ICT.meanSalary());
+        System.out.println("Average Salary: " + ICT.meanSalary() + "\n");
+
+        try {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Find an employee using an ID: ");
+            id = scanner.nextInt();
+            scanner.close();
+        } catch (Exception e) {
+            System.out.println("Error occured: " + e.toString());
+            return;
+        }
+        Employee emp = ICT.checkEmp(id);
+        if (emp == null) {
+            System.out.println("Employee with ID: " + id + " not found");
+            return;
+        }
+        System.out.println("Employee found " + emp);
     }
 }

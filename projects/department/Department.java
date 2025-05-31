@@ -36,7 +36,7 @@ public class Department {
 
     public Employee checkEmp(int ID) {
         for (Employee emp : emps) {
-            if (ID == emp.getID()) {
+            if (ID == emp.getid()) {
                 return emp;
             }
         }

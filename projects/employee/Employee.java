@@ -1,23 +1,23 @@
 package employee;
 
 public class Employee {
-    private int ID;
+    private int id;
     private String name;
     private double salary;
 
     // initializer
-    public Employee(int ID, String name, double salary) {
-        this.ID = ID;
+    public Employee(int id, String name, double salary) {
+        this.id = id;
         this.name = name;
         this.salary = salary;
     }
 
-    public int getID() {
-        return ID;
+    public int getid() {
+        return id;
     }
 
-    public void setID(int iD) {
-        ID = iD;
+    public void setid(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -38,7 +38,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return ID + " " + name + " " + salary + "\n";
+        return id + " " + name + " " + salary + "\n";
     }
 
 }
